@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side 2</title>
+</head>
+<body>
+<style>
+    .filterDiv {
+        background-color: #2196F3;
+        color: #ffffff;
+        width: 300px;
+        line-height: 80px;
+        text-align: center;
+        margin: 2px;
+        display: none;
+      }
+      
+      .show {
+        display: block;
+      }
+      
+      .container {
+        margin-top: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background-color: #ddd;
+      }
+      
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+      </style>
+      <body>
+      
+      <h2>Menu</h2>
+      
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('burger')"> Burger</button>
+        <button class="btn" onclick="filterSelection('sandwich')"> Sandwich</button>
+        <button class="btn" onclick="filterSelection('pizza')"> Pizza</button>
+        <button class="btn" onclick="filterSelection('sushi')"> Sushi</button>
+      </div>
+      
+      <div class="container">
+        <div class="filterDiv burger">Hamburger
+         <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Hamburger_%28black_bg%29.jpg/640px-Hamburger_%28black_bg%29.jpg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Hamburger</h1> 
+                <p>Klassisk hamburger</p> 
+                <button>Tilføj til kurv</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filterDiv sandwich">Kylling Bacon
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://nadias.dk/File/5943/kyllingbacon.jpg?width=2000&height=2000&stretchmode=uniformtomax&ticks=636970516190000000" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Kylling bacon</h1> 
+                    <p>Klassisk Kylling bacon sandwich</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="filterDiv burger">Double Cheese
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://groundbeefrecipes.com/wp-content/uploads/double-bacon-cheeseburger-recipe-6.jpg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Double Cheese</h1> 
+                <p>Klassisk Double Cheese burger</p> 
+                <button>Tilføj til kurv</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filterDiv sandwich">Roast beef
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://i0.wp.com/www.ungers-kitchen.de/cmsneu/wp-content/uploads/2021/04/RoastbeefSandwich-10-scaled.jpeg?fit=1300%2C975&ssl=1" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Roast Beef</h1> 
+                    <p>Klassisk Roast beef</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+    </div>
+        <div class="filterDiv burger">Cheese burger
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1200px-Cheeseburger.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Cheese Burger</h1> 
+                    <p>Klassisk Cheese burger</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+    </div>
+        <div class="filterDiv sandwich">Æg og rejer
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://mi-vi-food.dk/wp-content/uploads/2022/09/sandwich-med-aeg-og-rejer.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Æg og Rejer</h1> 
+                    <p>Klassisk Æg og rejer sandwich</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+    </div>
+        <div class="filterDiv pizza">Napoli
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://www.escapeaway.dk/rejseblog/wp-content/uploads/2020/12/3630876286_619e2f93ed_o.jpeg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Napoli</h1> 
+                    <p>Klassisk italiensk pizza</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv sushi">Sushimania
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="data:image/jpeg;base64,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" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Sushimania</h1> 
+                    <p>Lækker sushi med larks og kryderier på toppen</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv sushi">Nigiri
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://www.opskrifter.dk/images/recipes/oOCgQi1boNbz2T7TxSd3PeWd5UrWk2KYxj325c4t.jpeg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Lækker Nigiri</h1> 
+                    <p>forskellige nigiri</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv pizza">Margarita
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://gastrofun.dk/wp-content/uploads/inline-images/Pizza%20Margherita%20%281%29.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Margarita pizza</h1> 
+                    <p>Klassisk Margarita pizza</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv pizza">Hawaii
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://www.recetin.com/wp-content/uploads/2015/05/pizza_hawaiana.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Hawaii</h1> 
+                    <p>Klassisk Hawaii pizza</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv sushi">Happiness
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://atami.dk/vejle/wp-content/uploads/2021/12/Atami130.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Happiness</h1> 
+                    <p>lækker sushi med rejer, soja og chilli majo</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+        <div class="filterDiv pizza">Meatlover
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="https://cdn11.bigcommerce.com/s-p6vajvx5jy/images/stencil/1280x1280/products/117/663/Meat_Lovers_2__84120.1556128972.jpg?c=2" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Meatlover</h1> 
+                    <p>Meatlover med alt det gode</p> 
+                    <button>Tilføj til kurv</button>
+                  </div>
+                </div>
+        </div>
+        </div>
+      </div>
+      
+      <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+        
+        .flip-card-back {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        </style>
+ 
+      <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+      
+</body>
+</html>
